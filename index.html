@@ -9,10 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script> -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
-
-
-
 </head>
 
 <body>
@@ -26,7 +22,7 @@
 
     </div> -->
 
-    <input type="button" value="capture" id="edit" />
+    <input type="button" value="Capture" id="edit" />
     <div style="width: 80%;">
         <img src="./image/clothes.png">
     </div>
@@ -45,15 +41,13 @@
 
         function screenshot(e) {
 
-
-
             var startX, startY;
             var height = window.innerHeight;
             var width = window.innerWidth;
 
             var top = "0";
             var left = "0"
-            var width = "700";
+            var width = "1400";
             var height = "700";
 
             html2canvas(document.body).then(function (canvas) {
@@ -66,11 +60,6 @@
                 c.getContext('2d').putImageData(img, 0, 0);
                 save(c); // crop한 이미지 저장
             });
-
-
-
-
-
 
             function save(canvas) {
                 if (navigator.msSaveBlob) {
